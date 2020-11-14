@@ -2,4 +2,9 @@
     <string name="app_name">Praktikum Kelas 5</string>
     <string name="my_name">Fujian Anugrah</string>
     <string name="praktikum.apps">Praktikum Apps</string>
+    <string name="student_id">student_id</string>
+    <string name="student_name">student_name</string>
+    <string name="phone_number">phone_number</string>
+    <string name="send">send</string>
+    <string name="dial">dial</string>
 </resources>
