@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">Praktikum Kelas 5</string>
+    <string name="app_name">Class 5 Practice</string>
     <string name="my_name">Fujian Anugrah</string>
     <string name="praktikum.apps">Praktikum Apps</string>
-    <string name="student_id">student_id</string>
-    <string name="student_name">student_name</string>
-    <string name="phone_number">phone_number</string>
-    <string name="send">send</string>
-    <string name="dial">dial</string>
+    <string name="student_id">Student Id</string>
+    <string name="student_name">Student Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="send">Send</string>
+    <string name="dial">Dial</string>
+    <string name="change_language_settings">Change Language Settings</string>
 </resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Praktikum Kelas 5</string>
+    <string name="my_name">Fujian Anugrah</string>
+    <string name="praktikum.apps">Aplikasi Praktikum</string>
+    <string name="student_id">Id Mahasiswa</string>
+    <string name="student_name">Nama Mahasiswa</string>
+    <string name="phone_number">Nomor Hp</string>
+    <string name="send">Kirim</string>
+    <string name="dial">Panggil</string>
+    <string name="change_language_settings">Pengaturan Ubah Bahasa</string>
+</resources>

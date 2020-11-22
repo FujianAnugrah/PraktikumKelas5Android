@@ -4,6 +4,9 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 
@@ -34,11 +37,11 @@ class StudentActivity : AppCompatActivity() {
             //POJO Plain Old Java Object
 
 
-            val i = Intent(this,ResultActivity::class.java)
+            val i = Intent(this, ResultActivity::class.java)
             //i.putExtra(ResultActivity.EXTRA_ID,id)
             //i.putExtra(ResultActivity.EXTRA_NAME,name)
             //i.putExtra(ResultActivity.EXTRA_PHONE_NUMBER,phoneNumber)
-            i.putExtra(ResultActivity.EXTRA_STUDENT,student)
+            i.putExtra(ResultActivity.EXTRA_STUDENT, student)
             startActivity(i)
         }
 
@@ -47,5 +50,18 @@ class StudentActivity : AppCompatActivity() {
             val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
             startActivity(i)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.action_change_settings){
+            val i = Intent(Settings.ACTION_LOCALE_SETTINGS)
+            startActivity(i)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
