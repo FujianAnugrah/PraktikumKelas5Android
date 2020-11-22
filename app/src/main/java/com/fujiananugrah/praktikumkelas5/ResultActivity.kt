@@ -9,6 +9,7 @@ class ResultActivity : AppCompatActivity() {
         final val EXTRA_NAME = "student_name"
         final val EXTRA_ID = "student_id"
         final val EXTRA_PHONE_NUMBER = "student_phone_number"
+        final val EXTRA_STUDENT = "student"
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,12 +19,16 @@ class ResultActivity : AppCompatActivity() {
         val tvStudentNameResult = findViewById<TextView>(R.id.tvStudentNameResult)
         val tvStudentPhoneNumberResult = findViewById<TextView>(R.id.tvStudentPhoneNumberResult)
 
-        val id = intent.getStringExtra(EXTRA_ID)
-        val name = intent.getStringExtra(EXTRA_NAME)
-        val phoneNumber = intent.getStringExtra(EXTRA_PHONE_NUMBER)
+        //val id = intent.getStringExtra(EXTRA_ID)
+        //val name = intent.getStringExtra(EXTRA_NAME)
+        //val phoneNumber = intent.getStringExtra(EXTRA_PHONE_NUMBER)
 
-        tvStudentIdResult.text = id
-        tvStudentNameResult.text = name
-        tvStudentPhoneNumberResult.text = phoneNumber
+        val student = intent.getParcelableExtra<Student>(EXTRA_STUDENT)
+
+        if (student != null) {
+            tvStudentIdResult.text = student.id
+            tvStudentNameResult.text = student.name
+            tvStudentPhoneNumberResult.text = student.phoneNumber
+        }
     }
 }
